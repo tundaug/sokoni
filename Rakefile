@@ -24,3 +24,8 @@ desc "Starts app using shotgun"
 task :shotgun => :install do
     `bundle exec shotgun -p 4567 app.rb`
 end
+
+desc "migrate test database"
+task :mtdb do
+    `RACK_ENV=test rake db:migrate`
+end
