@@ -8,7 +8,7 @@ class BlogApp < Sinatra::Base
   register Sinatra::ActiveRecordExtension
 
   get '/' do
-    "hello world"
+    haml :index
   end
 
 end
