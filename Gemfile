@@ -6,7 +6,6 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'sqlite3'
 gem 'sinatra-session'
-gem 'rspec'
 gem 'haml'
 
 group :development do
@@ -15,6 +14,8 @@ group :development do
 end
 group :test do
     gem 'capybara'
+    gem 'rspec'
+    gem 'database_cleaner'
     gem 'cucumber'
     gem 'rspec-mocks'
 end
