@@ -9,7 +9,7 @@ require 'capybara/cucumber'
 require 'database_cleaner'
 
 require File.expand_path  "./../../../app.rb", __FILE__
-
+ActiveRecord::Base.logger.level = 1
 begin
       DatabaseCleaner.strategy = :transaction
 rescue NameError

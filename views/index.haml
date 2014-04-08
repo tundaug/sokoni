@@ -1,1 +1,14 @@
-<h1>Hello world</h1>
+.row
+  .col-md-12
+    .panel.panel-default
+      .panel-heading
+        %h4
+          Posts
+      .panel-body
+        .list-group
+          %ul
+            -if @posts
+              -@posts.each do|post|
+                %li.list-item
+                  =post.title
+                  =post.content
