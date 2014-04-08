@@ -1,6 +1,7 @@
 require 'sinatra'
 require "sinatra/activerecord"
-require './models/post'
+
+Dir["./models/*.rb"].each { |file| require file } 
 
 set :environment, :development
 
