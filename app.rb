@@ -11,5 +11,4 @@ class BlogApp < Sinatra::Base
     @posts = Post.all
     haml :index
   end
-
 end

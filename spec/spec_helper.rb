@@ -1,12 +1,14 @@
 ENV['RACK_ENV'] = "test"
 
+require "sinatra/activerecord"
 require 'rack/test'
-ActiveRecord::Base.logger.level = 1
-require File.expand_path '../../app.rb', __FILE__
 require 'capybara'
 require 'capybara/dsl'
+
 Dir["./models/*.rb"].each { |file| require file } 
-    
+require File.expand_path '../../app.rb', __FILE__
+ActiveRecord::Base.logger.level = 1
+
 module RSpecMixin
     include Rack::Test::Methods
     include Capybara::DSL

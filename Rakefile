@@ -22,7 +22,7 @@ end
 
 desc "Starts app using shotgun"
 task :shotgun => :install do
-    `bundle exec shotgun -p 4567 app.rb`
+    `bundle exec shotgun -p 4567 config.ru`
 end
 
 desc "migrate test database"
