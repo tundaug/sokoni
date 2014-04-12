@@ -1,32 +1,36 @@
 !!! 5
 %html
   %head
-    %title ::MyBlog
+    %title ::Kariibu kwa sokoni
     %meta{:charset=>"utf-8", :content => "IE=edge"}
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
-    %link(rel="shortcut icon" href="/images/favicon.ico")
-    %link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen")
-    %link(rel="stylesheet" href="datepicker/css/datepicker.css" media="screen")
-    %link(rel="stylesheet" href="bootstrap/css/jumbotron-narrow.css" media="screen")
+    %link(rel="stylesheet" href="semantic/css/semantic.min.css" media="screen")
+    %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700" type="text/css")
     %script(src="http://code.jquery.com/jquery-1.9.1.js")
-  %body
-    .container
-      .header
-        .nav.nav-pills.pull-right
-          %li.active
-            %a{:href=>"/"} Posts
-          %li
-            %a{:href=>"#"} About
-          %li
-            %a{:href=>"#"}Contact
-          %button.navbar-toggle{:type=>"button", 'data-toggle'=>"collapse", 'data-target'=>"bs-navbar-collapse"}
-            %span.sr-only
-              Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-      %h3.text-muted
-        Welcome to my blog 
-      %hr
-      %div
-        = yield
+  %body.index
+    %div.container
+      %div.ui.pointing.menu
+        %a.active.item
+          %i.home.icon
+          Home
+        %a.item
+          %i.mail.icon
+          Messages
+        %a.item
+          %i.user.icon
+          Friends
+        %div.right.menu
+          %div.ui.dropdown.item
+            Language 
+            %i.dropdown.icon
+            %div.menu
+              %a.item
+                English
+              %a.item
+                Russian
+              %a.item
+                Spanish
+          %div.item
+            %div.ui.teal.button
+              Sign Up
+          = yield
