@@ -4,11 +4,12 @@ gem 'sinatra'
 gem 'rake'
 gem 'activerecord'
 gem 'sinatra-activerecord'
-gem 'sqlite3'
+gem 'pg'
 gem 'sinatra-session'
 gem 'haml'
 
 group :development do
+    gem 'sqlite3'
     gem 'pry'
     gem 'shotgun'
 end

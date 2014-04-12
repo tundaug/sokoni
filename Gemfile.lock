@@ -46,6 +46,7 @@ GEM
     multi_test (0.1.1)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    pg (0.17.1)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -92,6 +93,7 @@ DEPENDENCIES
   cucumber
   database_cleaner
   haml
+  pg
   pry
   rake
   rspec
